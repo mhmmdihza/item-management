@@ -3,8 +3,6 @@ services:
   postgresd_central:
     container_name: postgresd_central
     image: postgres:13-alpine
-    volumes:
-        - ./init-center.sql:/docker-entrypoint-initdb.d/init-center.sql    
     ports:
       - 5432:5432
     environment:
