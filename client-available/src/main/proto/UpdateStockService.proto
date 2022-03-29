@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.item.management.client.service;
+
+
+message UpdateStockRequest {
+	int32 type = 1;
+	string officeId = 2;
+    repeated string serialNumbers = 3;
+}
+
+message UpdateStockResponse {
+}
+
+service UpdateStockService {
+    rpc updateStock(UpdateStockRequest) returns (UpdateStockResponse);
+}

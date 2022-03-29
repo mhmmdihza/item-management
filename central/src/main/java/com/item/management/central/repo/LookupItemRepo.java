@@ -12,6 +12,6 @@ import com.item.management.central.entity.LookupItem;
 @Service
 public interface LookupItemRepo extends JpaRepository<LookupItem, String> {
 
-	@Query(value = "select * from lookup_item where requestid = ?1", nativeQuery = true)
+	@Query(value = "select * from lookup_item where requestid = ?1 order by qty desc", nativeQuery = true)
 	List<LookupItem> findbyrequestid(String requestid);
 }
